@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lynra - Download & Install</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="snowflakes" aria-hidden="true"></div>
+
+  <div class="container">
+	<div class="tabs">
+	  <button class="tab-button active" data-tab="installLynra" onclick="openTab('installLynra')">Install Lynra</button>
+	  <button class="tab-button" data-tab="joinDiscord" onclick="openTab('joinDiscord')">Discord</button>
+	  <button class="tab-button" data-tab="features" onclick="openTab('features')">Features</button>
+	</div>
+	
+    <div id="installLynra" class="tab-content active">
+      <h2>Install Lynra</h2>
+      <p>Install the Lynra bootstrapper, which will help you get started quickly.</p>
+      <a href="https://www.dropbox.com/scl/fi/r08xphc8td4gt3iepuibh/Bootstrapper.exe?rlkey=4k3p7l9bbgq79925be7iebrva&st=81csaab3&dl=1" class="download-button">Download Lynra</a>
+    </div>
+
+    <div id="joinDiscord" class="tab-content">
+      <h2>Discord</h2>
+      <p>Join the community server!</p>
+      <a href="https://discord.gg/H9NvSg2zBq" target="_blank" class="download-button">Join</a>
+    </div>
+
+    <div id="features" class="tab-content">
+      <h2>Features</h2>
+      <ul class="features-list">
+        <li>🚀 94% UNC 🚀</li>
+        <li>Monaco Editor</li>
+        <li>Tab System</li>
+        <li>Multi-API</li>
+        <li>Only ~130 megabytes</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

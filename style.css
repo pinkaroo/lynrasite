@@ -1,0 +1,146 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1117;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background-color: white;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    opacity: 0.7;
+    animation: snowflakes 5s linear infinite;
+}
+
+@keyframes snowflakes {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tab-button {
+    background-color: #161b22;
+    color: #c9d1d9;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+    .tab-button:hover {
+        background-color: #58a6ff;
+        transform: scale(1.05);
+    }
+
+    .tab-button.active {
+        background-color: #1f6feb;
+        color: #fff;
+    }
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    .tab-content.active {
+        display: block;
+        opacity: 1;
+    }
+
+.download-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #1f6feb, #58a6ff);
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(88, 166, 255, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+    .download-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(88, 166, 255, 0.4);
+        background: linear-gradient(135deg, #58a6ff, #1f6feb);
+    }
+
+    .download-button:active {
+        transform: translateY(1px);
+        box-shadow: 0 4px 10px rgba(88, 166, 255, 0.3);
+    }
+
+.features-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .features-list li {
+        font-size: 1.2em;
+        margin: 10px 0;
+        line-height: 1.6;
+    }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .tab-button {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    .download-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
